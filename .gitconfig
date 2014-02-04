@@ -1,0 +1,15 @@
+[user]
+	name = mtak3
+	email = mtak@tyrellsys.com
+[core]
+    editor = vim
+[alias]
+    ci = commit
+    st = status
+    b = branch
+    co = checkout
+[merge]
+    ff = false
+[pull]
+    rebase = true
+

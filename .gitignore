@@ -1,0 +1,6 @@
+.ssh/*_dsa
+.ssh/*_dsa.pub
+.ssh/*_rsa
+.ssh/*_rsa.pub
+.ssh/known_hosts
+.vim/.netrwhist
