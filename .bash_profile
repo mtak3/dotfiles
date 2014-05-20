@@ -21,3 +21,5 @@ fi
 
 sudo ntpdate -u `grep ^server /etc/ntp.conf | head -1 | awk '{print $2}'`
 ntpq -p
+
+source ~/.git-completion.sh
