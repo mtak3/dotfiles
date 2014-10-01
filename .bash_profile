@@ -19,7 +19,13 @@ if [ -f ~/.prompt/gitprompt.sh ]; then
     . ~/.prompt/gitprompt.sh
 fi
 
-sudo ntpdate -u `grep ^server /etc/ntp.conf | head -1 | awk '{print $2}'`
+ntp_update() {
+    sudo ntpdate -u `grep ^server /etc/ntp.conf | head -1 | awk '{print $2}'`
+
+    return $?
+}
+
+ntp_update || (sudo service network restart && ntp_update)
 ntpq -p
 
 source ~/.git-completion.sh
